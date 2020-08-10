@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 3</title>
+</head>
+<body>
+<h1>{{ message }}</h1>
+{% if profile %}
+<table>
+    <tr><td>Name : {{ profile.f_name }} {{ profile.l_name }}</td></tr>
+    <tr><td>Contact info : {{ profile.ph_no }}</td></tr>
+    <tr><td>Email : {{ profile.email }}</td></tr>
+    <tr><td>Gender : {{profile.gender}}</td></tr>
+</table><br>
+{% endif %}
+<a href  = "{% url 'page2' %}" >Check another Email ?</a><br><br>
+<a href = "{% url 'home' %}" >Add User Information</a>
+
+
+</body>
+</html>

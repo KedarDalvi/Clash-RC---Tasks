@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 1</title>
+</head>
+<body>
+<a href ="{% url 'page2' %}">Check if user is Registered</a>
+<form method = "post">
+    {% csrf_token %}
+    <fieldset class = 'form-group'>
+    First Name : <input type = 'text' name = 'f_name'><br><br>
+    Last Name : <input type = 'text' name = 'l_name'><br><br>
+    Phone Number : <input type = "number" name = 'contact'><br><br>
+    Email address: <input type = "email" name = 'email_id'><br><br>
+    Gender :<br><br>
+    <input type="radio" name="gender" value="Male">Male<br><br>
+    <input type="radio" name="gender" value="Female">Female<br><br>
+    <input type="radio" name="gender" value="None">None<br><br>
+    <input type = 'submit' name = 'Submit'>
+    </fieldset>
+</form>
+</body>
+</html>
+
+
