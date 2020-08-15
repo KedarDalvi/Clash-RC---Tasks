@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page 2</title>
+    <title>Login Page</title>
 </head>
 <body>
-
+{% if message %}
+<h1>{{ message }}</h1>
+{% endif %}
+<form method = 'post'>
+    {% csrf_token %}
+    <fieldset>
+    Username : <input type = 'text' name = 'username'><br><br>
+    Password : <input type = 'password' name = 'password'><br><br>
+        <input type = 'submit' value = 'Submit'>
+    </fieldset>
+</form>
 </body>
 </html>

@@ -1,12 +1,12 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, auth
 
 class UserProfile(models.Model):
-    use_name = models.OneToOneField(User, on_delete = models.CASCADE, max_length = 50)
-    ph_no = models.IntegerField(max_length = 10)
+    username = models.OneToOneField(User, on_delete = models.CASCADE, max_length = 50)
+    ph_no = models.IntegerField()
 
     def __str__(self):
-        return self.f_name + ' ' + self.l_name
+        return self.username
 
 
 

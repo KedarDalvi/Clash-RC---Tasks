@@ -6,6 +6,9 @@
 </head>
 <body>
 <h1>Signup Page</h1>
+{% if message %}
+<h3>{{ message }}</h3>
+{% endif %}
 <form method = 'post'>
     {% csrf_token %}
     <fieldset class = 'form-group'>
@@ -13,11 +16,12 @@
     Email : <input type = 'text' name = 'email'><br><br>
     First Name : <input type = 'text' name = 'f_name'><br><br>
     Last Name : <input type = 'text' name = 'l_name'><br><br>
-    Contact No. : <input type = 'number' name = 'ph_no'><br><br>
-    Password : <input type = 'text' name = 'f_pass'><br><br>
-    Confirm Password : <input type = 'text' name = 'c_pass'><br><br>
+    Phone no : <input type = 'number' name = 'phone'><br><br>
+    Password : <input type = 'password' name = 'f_pass'><br><br>
+    Confirm Password : <input type = 'password' name = 'c_pass'><br><br>
         <input type="submit">
     </fieldset>
+    <a href = "{% url 'page2' %}">Already a member? SignIn Here</a>
 </form>
 </body>
 </html>
