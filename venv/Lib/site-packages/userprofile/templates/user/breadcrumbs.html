@@ -1,0 +1,14 @@
+{% load i18n %}
+    <ol class="breadcrumb" itemprop="breadcrumb">
+        <li><a href="/" class="active">{% trans "Home" %}</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'user:home' %}">Profile</a> <span class="divider"></span></li>
+        {% endif %}
+        {% if not user.is_authenticated %}
+        <li><a href="{% url 'user:login' %}">Login</a> <span class="divider"></span></li>
+        {% else %}
+        <li><a href="{% url 'user:logout' %}">Logout</a> <span class="divider"></span></li>
+        {% endif %}
+      <li class="active">You are here</li>
+    </ol>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 1</title>
+</head>
+<body>
+<h1>Signup Page</h1>
+<form method = 'post'>
+    {% csrf_token %}
+    <fieldset class = 'form-group'>
+    Username : <input type = 'text' name = 'user'><br><br>
+    Email : <input type = 'text' name = 'email'><br><br>
+    First Name : <input type = 'text' name = 'f_name'><br><br>
+    Last Name : <input type = 'text' name = 'l_name'><br><br>
+    Contact No. : <input type = 'number' name = 'ph_no'><br><br>
+    Password : <input type = 'text' name = 'f_pass'><br><br>
+    Confirm Password : <input type = 'text' name = 'c_pass'><br><br>
+        <input type="submit">
+    </fieldset>
+</form>
+</body>
+</html>

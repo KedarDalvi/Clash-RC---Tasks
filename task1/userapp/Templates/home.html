@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    {% for i in numbers %}
+    {{ i }}<br>
+    {% endfor %}
+
+    <form method = "post" >
+        {% csrf_token %}
+        Starting Number : <input type = 'number'  name = 'number1'><br><br>
+        Ending Number : <input type = 'number' name = 'number2'><br><br>
+        <button type ='Submit'>Submit</button>
+    </form>
+</body>
+</html>
