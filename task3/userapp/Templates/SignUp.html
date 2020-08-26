@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp Page</title>
+    <h1>SignUp Page</h1>
+    {% if message %}
+    <h1>{{ message }}</h1>
+    {% endif %}
+    <fieldset>
+        <form method = 'POST' action = '{% url "signup" %}'>
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Username :</td>
+                    <td><input type = 'text' name = 'username'></td>
+                </tr>
+                <tr>
+                    <td>First Name :</td>
+                    <td><input type = 'text' name = 'first_name'></td>
+                </tr>
+                <tr>
+                <td>Last Name :</td>
+                    <td><input type = 'text' name = 'last_name'></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><input type = 'email' name = 'email'></td>
+                </tr>
+                <tr>
+                    <td>Phone :</td>
+                    <td><input type = 'number' name = 'phone'></td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td><input type = 'password' name = 'f_pass'></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password :</td>
+                    <td><input type = 'password' name = 'c_pass'></td>
+                </tr>
+            </table>
+            <input type = 'submit' value = 'Submit' name = 'Submit'>
+        </form>
+    </fieldset>
+    <a href = '{% url "signin" %}'>Already a member? SignIn Here</a><br><br>
+</head>
+1. Length of the password must be 8-32 caharcters.<br>
+2. Password must contain at least 1 Uppercase Letter.<br>
+3. Password must contain at least 1 Lowercase Letter.<br>
+4. Password must contain at least 1 special character.<br>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignIn Page</title>
+</head>
+<body>
+{% if message %}
+<h1>{{ message }}</h1>
+{% endif %}
+<fieldset>
+    <form method = 'POST' action = '{% url "signin" %}'>
+        {% csrf_token %}
+        Username : <input type = 'text' name = 'username'><br><br>
+        Password : <input type = 'password' name = 'password'><br><br>
+        <input type = 'submit' name = 'Submit' value = 'Submit'>
+    </form>
+</fieldset>
+</body>
+</html>

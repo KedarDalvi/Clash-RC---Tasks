@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+{% if message %}
+<h1>{{ message }} logged in successfully.</h1>
+{% endif %}
+<form method = 'POST' action = '{% url "logout" %}'>
+    {% csrf_token %}
+    <input type = 'submit' value = 'Logout' name = 'logout'>
+</form>
+
+</body>
+</html>
